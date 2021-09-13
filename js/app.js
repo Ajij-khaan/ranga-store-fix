@@ -32,7 +32,7 @@ const showProducts = (products) => {
     <h2 class="fs-5 text fw-bold">Price: $ ${product.price}</h2>
     <div class="d-flex ">
     <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="btn border border-2 border-Secondary btn-hover rounded-pill w-50 mx-2 mt-5">Add to Cart</button>
-    <button onclick="" id="details-btn" class="btn border border-2 border-Secondary btn-hover rounded-pill w-50 mx-2 mt-5">Details</button></div>
+    <button id="details-btn" class="btn border border-2 border-Secondary btn-hover rounded-pill w-50 mx-2 mt-5">Details</button></div>
     </div>
       `;
     document.getElementById("all-products").appendChild(div);
