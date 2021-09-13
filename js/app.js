@@ -12,16 +12,27 @@ const showProducts = (products) => {
     const div = document.createElement("div");
     div.classList.add("product");
     div.innerHTML = `<div class="single-product">
-      <div>
-    <img class="product-image" src=${image}></img>
-      </div>
-      <h3>${product.title}</h3>
-      <p>Category: ${product.category}</p>
-      <p>Average Rating: ${product.rating.rate}</p>
-      <p>Total Rating: ${product.rating.count}</p>
-      <h2>Price: $ ${product.price}</h2>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button></div>
+    <div>
+  <img class="product-image" src=${image}></img>
+    </div>
+    <h3 class="fs-5 text fw-bold mt-3">${product.title}</h3>
+    <p>Category: ${product.category}</p>
+    <div>
+    <div>
+      <i class="bi bi-star-fill text-success"></i>
+      <i class="bi bi-star-fill text-success"></i>
+      <i class="bi bi-star-fill text-success"></i>
+      <i class="bi bi-star-fill text-success"></i>
+      <i class="bi bi-star-half text-success"></i>
+      <i class="fw-bold">(${product.rating.rate})</i>
+    </div>
+  </div>
+    <p>Total Rating: ${product.rating.count}</p>
+    <h2>Price: $ ${product.price}</h2>
+    <div class="d-flex ">
+    <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="btn border border-2 border-Secondary btn-hover rounded-pill w-50 mx-2">add to cart</button>
+    <button id="details-btn" class="btn border border-2 border-Secondary btn-hover rounded-pill w-50 mx-2">Details</button></div>
+    </div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
